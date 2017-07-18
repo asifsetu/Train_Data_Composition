@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+
+<div class="row">
+
+    <div class="col-md-12">
+    	<h1 style="text-align: center">Train Composition Viewer</h1>
+		<br/>
+        <div class="wrapperarea">
+            {% for i in finaldata %}
+                <div class="col-sm-4">
+                    <div class="compo">
+                       {{ i.trainType }}{{ i.trainNumber }} {{ i.stationShortCode }} - {{ i.stationShortCode2 }} <br>
+                        Locomotive: {{ i.locomotiveType }} {{ i.powerType }}<br>
+                        Wagons: {% for w in i.wagons %}
+                            {{ w.wagonType }},
+                        {% endfor %} ({{ i.totalLength }}) meters
+                        <br>
+                        Max speed: {{ i.maximumSpeed }}KM/h
+                    </div>
+                </div>
+            {% endfor %}
+        <div class="clear"></div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

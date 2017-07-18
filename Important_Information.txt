@@ -1,0 +1,22 @@
+###############################################################################################################
+
+                          How to run the programme and important file location.
+
+###############################################################################################################
+
+The task was developed using python django. So please install python and pip first then install requirement.txt
+to run the programme. When all the required programme will be installed then just hit http://127.0.0.1:8000/ in
+web browser and the webpage will show you the Train Composition. Thanks in advance for viewing. 
+
+You can find the HTML file in the below location:
+
+/TrainComposition/apps/templates/home.html
+
+You can find the base HTML file in the below locaion:
+
+/TrainComposition/templates/base.html
+
+You can find the live JSON data fached in the below location in views.py file:
+
+/TrainComposition/apps/views.py
+
